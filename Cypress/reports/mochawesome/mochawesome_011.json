@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-01-15T10:08:00.347Z",
+    "end": "2020-01-15T10:08:51.462Z",
+    "duration": 51115,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f90d2ce6-04a6-4283-8b73-262d833ada0f",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "77e90e5b-a8aa-4164-93ed-35072ab2d41b",
+          "title": "Memtion members in group and channel",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Mention the members using @ in groups",
+              "fullTitle": "Memtion members in group and channel Mention the members using @ in groups",
+              "timedOut": null,
+              "duration": 26052,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//cy.wait(4000)\ncy.get('span[data-qa=\"channel_sidebar_name_chatwithuser1,-chatwithuser2\"]').click();\nvar str = _support.UTILS.getRandomString();\ncy.get('.p-message_input_field').should('be.visible').type('@neelesh' + '{enter}' + '@testuser1' + '{enter}' + str + 'This is a new chat in group').type('{enter}');",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: 'span[data-qa=\"channel_sidebar_name_chatwithuser1,-chatwithuser2\"]', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: 'span[data-qa=\"channel_sidebar_name_chatwithuser1,-chatwithuser2\"]', but never found it.\n    at Object.cypressErr (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:86206:11)\n    at Object.throwErr (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:86161:18)\n    at Object.throwErrByPath (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:86193:17)\n    at retry (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:76849:16)\n    at onFailFn (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:65634:16)\n    at tryCatcher (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:120669:23)\n    at Promise._settlePromiseFromHandler (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:118605:31)\n    at Promise._settlePromise (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:118662:18)\n    at Promise._settlePromise0 (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:118707:10)\n    at Promise._settlePromises (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:118782:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:115394:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:115404:10)\n    at Async.drainQueues (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:115278:14)",
+                "diff": null
+              },
+              "uuid": "fd31dd74-79a4-4430-ac9a-cc43114ab699",
+              "parentUUID": "77e90e5b-a8aa-4164-93ed-35072ab2d41b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Mention the members using @ in channel",
+              "fullTitle": "Memtion members in group and channel Mention the members using @ in channel",
+              "timedOut": null,
+              "duration": 18804,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('span[data-qa=\"channel_sidebar_name_general\"]').click();\nvar str = _support.UTILS.getRandomString();\ncy.get('.p-message_input_field').should('be.visible').type('@chatwithuser1' + '{enter}' + '@chatwithuser2' + '{enter}' + str + 'This is a new chat in channel').type('{enter}');",
+              "err": {},
+              "uuid": "f772316e-43c7-4d2d-be1f-51820f5ba700",
+              "parentUUID": "77e90e5b-a8aa-4164-93ed-35072ab2d41b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f772316e-43c7-4d2d-be1f-51820f5ba700"
+          ],
+          "failures": [
+            "fd31dd74-79a4-4430-ac9a-cc43114ab699"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 44856,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+    "baseUrl": "https://qa-ban6425.slack.com",
+    "chromeWebSecurity": false,   
+    "video": true,
+    "screenshotsFolder": "cypress/media/screenshot",
+    "videosFolder" : "cypress/media/videos",
+    
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporterOptions": {
+            "reportDir": "cypress/reports/mochawesome",
+            "overwrite": false,
+            "html": false,
+            "json": true
+        }
+    }
+}

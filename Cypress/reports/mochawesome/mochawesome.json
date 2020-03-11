@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-01-15T09:59:11.164Z",
+    "end": "2020-01-15T10:00:01.236Z",
+    "duration": 50072,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f6be3e69-f0cf-4f12-962f-e250a06da2db",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "21d05791-fd32-4c8a-bf52-1a737faa50bf",
+          "title": "Add Apps to Workspace",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add apps to Workspace",
+              "fullTitle": "Add Apps to Workspace Add apps to Workspace",
+              "timedOut": null,
+              "duration": 824,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('div[data-qa=\"apps\"]').click();\ncy.get('.p-apps_browser__filter_header h2').should('have.text', 'Browse Apps');\ncy.get('.p-apps_browser__app[data-app_id=\"A6NL8MJ6Q\"]').should('be.visible').click();\ncy.visit('https://qa-ban6425.slack.com/apps/A6NL8MJ6Q-google-drive?utm_source=in-prod&utm_medium=inprod-btn_app_install-index-click');\ncy.get('.mobile_app_actions .p-app_detail_btn').should('have.attr', 'href', '/apps/new/A6NL8MJ6Q').click();\ncy.get('#add_integration').should('be.visible').click();\ncy.visit('https://qa-ban6425.slack.com');\ncy.xpath('//div[@class=\"p-channel_sidebar__static_list\"]').should('contains', 'Google Drive');\n/*cy.get('div[data-qa=\"apps\"]').click()\ncy.get(https://qa-ban6425.slack.com/services/BSH4N3C3S);\ncy.get('.p-apps_browser__filter_header h2').should('have.text', 'Browse Apps')\ncy.get('.p-apps_browser__app[data-app_id=\"A6NL8MJ6Q\"]').should('be.visible').click()*/",
+              "err": {
+                "message": "CypressError: cy.click() failed because it requires a DOM element.\n\nThe subject received was:\n\n  > undefined\n\nThe previous command that ran was:\n\n  > cy.get()\n\nBecause this error occurred during a 'after each' hook we are skipping the remaining tests in the current suite: 'Add Apps to Workspace'",
+                "estack": "CypressError: cy.click() failed because it requires a DOM element.\n\nThe subject received was:\n\n  > undefined\n\nThe previous command that ran was:\n\n  > cy.get()\n\nBecause this error occurred during a 'after each' hook we are skipping the remaining tests in the current suite: 'Add Apps to Workspace'\n    at Object.cypressErr (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:86206:11)\n    at Object.throwErr (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:86161:18)\n    at Object.throwErrByPath (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:86193:17)\n    at ensureElement (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:74310:21)\n    at validateType (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:74182:16)\n    at Object.ensureSubjectByType (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:74210:9)\n    at pushSubjectAndValidate (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:81127:15)\n    at Context.<anonymous> (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:81413:18)\n    at https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:80892:33\n    at tryCatcher (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:120669:23)\n    at Promise._settlePromiseFromHandler (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:118605:31)\n    at Promise._settlePromise (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:118662:18)\n    at Promise._settlePromiseCtx (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:118699:10)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:115399:12)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:115404:10)\n    at Async.drainQueues (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:115278:14)",
+                "diff": null
+              },
+              "uuid": "23863c82-5a54-4e4f-9b21-cdc25887317b",
+              "parentUUID": "21d05791-fd32-4c8a-bf52-1a737faa50bf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "23863c82-5a54-4e4f-9b21-cdc25887317b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 824,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

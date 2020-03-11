@@ -1,0 +1,167 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 3,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-01-15T10:03:04.557Z",
+    "end": "2020-01-15T10:03:37.144Z",
+    "duration": 32587,
+    "testsRegistered": 4,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7f239593-daf3-4dc0-ad2c-0e2a92ff03c4",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0a28a973-abeb-461f-b269-bb7fd1b15bc3",
+          "title": "test to create new public channel",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "create a new private channel",
+              "fullTitle": "test to create new public channel create a new private channel",
+              "timedOut": null,
+              "duration": 24837,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.xpath('//div[@data-qa=\"channels\"]').should('be.visible');\ncy.xpath('//div[@data-qa=\"channels\"]').within(function () {\n  cy.get('.p-channel_sidebar__section_heading_right').click();\n});\ncy.get('.c-sk-modal_content_section').should('be.visible');\ncy.get('#channel-name').type(privateChannelName);\ncy.get('.p-channel_create_modal').should('be.visible');\ncy.get('#channel_create_modal_toggle_label').within(function () {\n  cy.get('[type=\"checkbox\"]').check();\n});\ncy.get('.p-channel_create_modal__sub_section_copy_title').should('be.visible').contains('Make private');\ncy.get('.c-sk-modal_footer').within(function () {\n  cy.contains('Create').click();\n});\ncy.get('.p-channel_invite_modal').should('be.visible');\ncy.get('.c-sk-modal_footer_actions', {\n  timeout: 10000\n}).contains('Skip for now').click();",
+              "err": {},
+              "uuid": "0c9a971d-96af-4a59-8960-a8d5cf0f29b4",
+              "parentUUID": "0a28a973-abeb-461f-b269-bb7fd1b15bc3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify private channel created",
+              "fullTitle": "test to create new public channel verify private channel created",
+              "timedOut": null,
+              "duration": 870,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.xpath('//div[@class=\"p-channel_sidebar__static_list\"]').should('be.visible').contains(privateChannelName);",
+              "err": {},
+              "uuid": "98d5e7b7-74df-4183-a537-83a0f0d0e656",
+              "parentUUID": "0a28a973-abeb-461f-b269-bb7fd1b15bc3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "delete private channel",
+              "fullTitle": "test to create new public channel delete private channel",
+              "timedOut": null,
+              "duration": 1258,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.xpath('//div[@class=\"p-channel_sidebar__static_list\"]').should('be.visible').contains(privateChannelName).rightclick();\ncy.get('.c-menu__items').within(function () {\n  cy.contains('Leave').click();\n});\ncy.get('.c-dialog__footer_buttons').contains('Yes, leave & archive the channel').click();",
+              "err": {},
+              "uuid": "2c07db3e-e5b1-4500-8c78-48d376d771f2",
+              "parentUUID": "0a28a973-abeb-461f-b269-bb7fd1b15bc3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify private channel deleted",
+              "fullTitle": "test to create new public channel verify private channel deleted",
+              "timedOut": null,
+              "duration": 608,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.xpath('//div[@class=\"p-channel_sidebar__static_list\"]').should('not.contain', privateChannelName);",
+              "err": {
+                "message": "CypressError: cy.click() failed because it requires a DOM element.\n\nThe subject received was:\n\n  > undefined\n\nThe previous command that ran was:\n\n  > cy.contains()\n\nBecause this error occurred during a 'after all' hook we are skipping the remaining tests in the current suite: 'test to create new public c...'",
+                "estack": "CypressError: cy.click() failed because it requires a DOM element.\n\nThe subject received was:\n\n  > undefined\n\nThe previous command that ran was:\n\n  > cy.contains()\n\nBecause this error occurred during a 'after all' hook we are skipping the remaining tests in the current suite: 'test to create new public c...'\n    at Object.cypressErr (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:86206:11)\n    at Object.throwErr (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:86161:18)\n    at Object.throwErrByPath (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:86193:17)\n    at ensureElement (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:74310:21)\n    at validateType (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:74182:16)\n    at Object.ensureSubjectByType (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:74210:9)\n    at pushSubjectAndValidate (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:81127:15)\n    at Context.<anonymous> (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:81413:18)\n    at https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:80892:33\n    at tryCatcher (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:120669:23)\n    at Promise._settlePromiseFromHandler (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:118605:31)\n    at Promise._settlePromise (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:118662:18)\n    at Promise._settlePromiseCtx (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:118699:10)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:115399:12)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:115404:10)\n    at Async.drainQueues (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:115278:14)",
+                "diff": null
+              },
+              "uuid": "a54d5afa-570c-4d4d-9047-49d79678d33a",
+              "parentUUID": "0a28a973-abeb-461f-b269-bb7fd1b15bc3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0c9a971d-96af-4a59-8960-a8d5cf0f29b4",
+            "98d5e7b7-74df-4183-a537-83a0f0d0e656",
+            "2c07db3e-e5b1-4500-8c78-48d376d771f2"
+          ],
+          "failures": [
+            "a54d5afa-570c-4d4d-9047-49d79678d33a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 27573,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

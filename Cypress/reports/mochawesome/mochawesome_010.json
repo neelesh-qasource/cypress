@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-01-15T10:07:13.289Z",
+    "end": "2020-01-15T10:07:46.392Z",
+    "duration": 33103,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "59bc15f2-7cf5-4c1c-93b3-410ed8502723",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "65769a00-2f05-4726-b781-d8d3316f9d5d",
+          "title": "Invite People",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Click on invite link",
+              "fullTitle": "Invite People Click on invite link",
+              "timedOut": null,
+              "duration": 24925,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-sidebar-link-id=\"Vinvites\"]').click();\nvar str = _support.UTILS.getRandomString();\ncy.get('input[name=\"invite_modal_email_0\"]').type(str + \"@gmail.com\");\ncy.get('input[name=\"invite_modal_name_0\"]').type(str);\ncy.get('[data-qa=\"submit_invites_button\"]').click();",
+              "err": {},
+              "uuid": "49cc6148-a134-47a7-ba2e-97c2b3d61ccc",
+              "parentUUID": "65769a00-2f05-4726-b781-d8d3316f9d5d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify a successful invite",
+              "fullTitle": "Invite People Verify a successful invite",
+              "timedOut": null,
+              "duration": 2076,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-qa=\"invite_modal_invites_sent_done_button\"]').click();",
+              "err": {},
+              "uuid": "648d928e-c371-443e-bfc3-8b36a4207729",
+              "parentUUID": "65769a00-2f05-4726-b781-d8d3316f9d5d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "49cc6148-a134-47a7-ba2e-97c2b3d61ccc",
+            "648d928e-c371-443e-bfc3-8b36a4207729"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 27001,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-01-15T10:02:08.276Z",
+    "end": "2020-01-15T10:02:51.264Z",
+    "duration": 42988,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6423e4bb-01ab-408f-a028-fc027d5a4120",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "08557dc6-2f0c-478c-bb4a-2b7f3d95ead2",
+          "title": "Create Group with multiple members",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Open direct message and create group",
+              "fullTitle": "Create Group with multiple members Open direct message and create group",
+              "timedOut": null,
+              "duration": 37278,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// cy.get('[data-sidebar-link-id=\"Vinvites\"]').click()\n// const str = UTILS.getRandomString();\n// cy.get('input[name=\"invite_modal_email_0\"]').type(str+\"@gmail.com\")\n// cy.get('input[name=\"invite_modal_name_0\"]').type(str)\n// cy.get('[data-qa=\"submit_invites_button\"]').click()\n// cy.get('[data-qa=\"invite_modal_invites_sent_done_button\"]').click()\ncy.get('[data-qa=\"channel_sidebar__plus__ims\"]').click();\ncy.get('#dm-browser').type('Testuser1').type('{enter}');\ncy.get('#dm-browser').type('Testuser2').type('{enter}'); //cy.get('#dm-browser_option_2').click()\n// cy.get('#dm-browser_option_3').click()\ncy.get('.p-dm_browser_modal__controls .c-button').should('be.visible').click();\nvar str = _support.UTILS.getRandomString();\ncy.get('.p-message_input_field').should('be.visible').type(str + 'This is a new chat').type('{enter}');",
+              "err": {},
+              "uuid": "b9b7f69c-3c4f-4d1e-94d3-f8d77deef5cc",
+              "parentUUID": "08557dc6-2f0c-478c-bb4a-2b7f3d95ead2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b9b7f69c-3c4f-4d1e-94d3-f8d77deef5cc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 37278,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-01-15T10:01:15.880Z",
+    "end": "2020-01-15T10:01:55.402Z",
+    "duration": 39522,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6c062921-4282-4ef7-8e9c-55f49fd271d6",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e9b2e708-bbc8-40b7-a69a-97d4d2c9381d",
+          "title": "test to create new channel",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login with user",
+              "fullTitle": "test to create new channel Login with user",
+              "timedOut": null,
+              "duration": 18892,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.login();",
+              "err": {},
+              "uuid": "0f0f7f02-02a7-43d5-a74c-318bbc34cc98",
+              "parentUUID": "e9b2e708-bbc8-40b7-a69a-97d4d2c9381d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "create a public channel",
+              "fullTitle": "test to create new channel create a public channel",
+              "timedOut": null,
+              "duration": 20206,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "var random = _support.UTILS.getRandomString();\ncy.xpath('//span[contains(text(),\"Add a channel\")]').click();\ncy.xpath('//input[@placeholder=\"Search channels\"]').type(random);\ncy.wait(3000);\ncy.xpath('//button[contains(text(),\"Create Channel\")]').should('be.visible').click();\ncy.get('.p-channel_create_modal').should('be.visible');\ncy.get('.c-sk-modal_footer').within(function () {\n  cy.contains('Create').click();\n});",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: 'undefined', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: 'undefined', but never found it.\n    at Object.cypressErr (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:86206:11)\n    at Object.throwErr (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:86161:18)\n    at Object.throwErrByPath (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:86193:17)\n    at retry (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:76849:16)\n    at onFailFn (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:65634:16)\n    at tryCatcher (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:120669:23)\n    at Promise._settlePromiseFromHandler (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:118605:31)\n    at Promise._settlePromise (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:118662:18)\n    at Promise._settlePromise0 (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:118707:10)\n    at Promise._settlePromises (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:118782:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:115394:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:115404:10)\n    at Async.drainQueues (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:115278:14)",
+                "diff": null
+              },
+              "uuid": "387298ed-d65d-414a-84c9-76cd27c9d180",
+              "parentUUID": "e9b2e708-bbc8-40b7-a69a-97d4d2c9381d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0f0f7f02-02a7-43d5-a74c-318bbc34cc98"
+          ],
+          "failures": [
+            "387298ed-d65d-414a-84c9-76cd27c9d180"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 39098,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

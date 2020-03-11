@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-01-15T10:06:31.806Z",
+    "end": "2020-01-15T10:07:02.305Z",
+    "duration": 30499,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2a0f6e68-74fc-4c12-8b66-f83a0572f639",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5c7d5bb4-22f2-443d-865a-dfea10f68698",
+          "title": "Test Latest updates are visible to users under Gift Box icon",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login to user account",
+              "fullTitle": "Test Latest updates are visible to users under Gift Box icon Login to user account",
+              "timedOut": null,
+              "duration": 18748,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('general', {\n  timeout: 10000\n});",
+              "err": {},
+              "uuid": "57fb5d15-fce6-4578-a084-9f2233ca01f8",
+              "parentUUID": "5c7d5bb4-22f2-443d-865a-dfea10f68698",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Click on More items drop down menu",
+              "fullTitle": "Test Latest updates are visible to users under Gift Box icon Click on More items drop down menu",
+              "timedOut": null,
+              "duration": 2229,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.xpath('//i[@class=\"c-icon c-icon--vertical-ellipsis\"]').click();",
+              "err": {},
+              "uuid": "155dc135-7326-4dd9-adfc-e08be4398e12",
+              "parentUUID": "5c7d5bb4-22f2-443d-865a-dfea10f68698",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Click on What new item from dropdown menu",
+              "fullTitle": "Test Latest updates are visible to users under Gift Box icon Click on What new item from dropdown menu",
+              "timedOut": null,
+              "duration": 1031,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.ReactModalPortal').within(function () {\n  cy.contains('What’s New').click();\n});",
+              "err": {},
+              "uuid": "f68e58f2-79e5-4a1c-ac39-e1a6a3d9750b",
+              "parentUUID": "5c7d5bb4-22f2-443d-865a-dfea10f68698",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Latest updates are visible to users under Whats New",
+              "fullTitle": "Test Latest updates are visible to users under Gift Box icon Verify Latest updates are visible to users under Whats New",
+              "timedOut": null,
+              "duration": 897,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('span.c-label__text').contains('Notify me about updates').should('be.visible');",
+              "err": {},
+              "uuid": "bed817a4-ff96-4b6b-bc55-1595ec8937d0",
+              "parentUUID": "5c7d5bb4-22f2-443d-865a-dfea10f68698",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "57fb5d15-fce6-4578-a084-9f2233ca01f8",
+            "155dc135-7326-4dd9-adfc-e08be4398e12",
+            "f68e58f2-79e5-4a1c-ac39-e1a6a3d9750b",
+            "bed817a4-ff96-4b6b-bc55-1595ec8937d0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22905,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

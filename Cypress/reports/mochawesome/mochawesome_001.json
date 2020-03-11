@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-01-15T10:00:21.473Z",
+    "end": "2020-01-15T10:01:03.209Z",
+    "duration": 41736,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4edb407b-6e54-4b48-9397-ac7a69246465",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "22260b8e-16e9-4f98-8aec-d5577df77a11",
+          "title": "test to create new public channel",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "running first API",
+              "fullTitle": "test to create new public channel running first API",
+              "timedOut": null,
+              "duration": 41652,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('https://slack.com/api/chat.postMessage?token=xoxp-827462940530-842106451911-904587315142-987b16bad60d139a95521a5f12d204ee&channel=CQQ7DE25N&text=Janepostman'); //cy.request('POST','https://slack.com/api/chat.postMessage', { token: 'xoxp-827462940530-842106451911-904587315142-987b16bad60d139a95521a5f12d204ee' },{ channel: 'CQQ7DE25N' },{ text: 'Jane' })\n/* .then((response) => {\n   // response.body is automatically serialized into JSON\n   expect(response.body).to.have.property('name', 'Jane') // true*/\ncy.wait(20000);",
+              "err": {},
+              "uuid": "f961276b-3852-4c54-965e-04faf5890c65",
+              "parentUUID": "22260b8e-16e9-4f98-8aec-d5577df77a11",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f961276b-3852-4c54-965e-04faf5890c65"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 41652,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

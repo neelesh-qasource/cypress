@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 0,
+    "passes": 0,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-01-15T10:05:14.395Z",
+    "end": "2020-01-15T10:05:39.448Z",
+    "duration": 25053,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 2,
+    "hasOther": true,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "3c50e05d-869a-44ec-82f4-9a7476f42628",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c55d703d-b57b-4afc-bf20-597f9c7a7916",
+          "title": "Test user is able to access settings and view edit its profile",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Update user Title",
+              "fullTitle": "Test user is able to access settings and view edit its profile Update user Title",
+              "timedOut": null,
+              "duration": 807,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[type=\"chevron-down\"]').click();\ncy.get('.c-menu_item__li').within(function () {\n  cy.contains('Profile & account').should('be.visible').click();\n}); //Verify Profile page is displayed\ncy.get('.p-flexpane_header__primary_content').should('be.visible').contains('Workspace Directory'); //add a title and edit the profile\ncy.get('.p-member_profile__name').within(function () {\n  cy.contains('Add a title').should('be.visible').click();\n}); //Ensuring the pop is displayed with text field. \ncy.get('#real_name-input').should('be.visible'); //Ensuring the save is not clicked until the typing is complete\ncy.get('#real_name-input').clear().type(username).then(function () {\n  cy.contains('Save Changes').should('be.visible').click();\n});",
+              "err": {
+                "message": "CypressError: cy.click() failed because it requires a DOM element.\n\nThe subject received was:\n\n  > undefined\n\nThe previous command that ran was:\n\n  > cy.contains()\n\nBecause this error occurred during a 'after all' hook we are skipping the remaining tests in the current suite: 'Test user is able to access...'",
+                "estack": "CypressError: cy.click() failed because it requires a DOM element.\n\nThe subject received was:\n\n  > undefined\n\nThe previous command that ran was:\n\n  > cy.contains()\n\nBecause this error occurred during a 'after all' hook we are skipping the remaining tests in the current suite: 'Test user is able to access...'\n    at Object.cypressErr (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:86206:11)\n    at Object.throwErr (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:86161:18)\n    at Object.throwErrByPath (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:86193:17)\n    at ensureElement (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:74310:21)\n    at validateType (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:74182:16)\n    at Object.ensureSubjectByType (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:74210:9)\n    at pushSubjectAndValidate (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:81127:15)\n    at Context.<anonymous> (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:81413:18)\n    at https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:80892:33\n    at tryCatcher (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:120669:23)\n    at Promise._settlePromiseFromHandler (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:118605:31)\n    at Promise._settlePromise (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:118662:18)\n    at Promise._settlePromiseCtx (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:118699:10)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:115399:12)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:115404:10)\n    at Async.drainQueues (https://qa-ban6425.slack.com/__cypress/runner/cypress_runner.js:115278:14)",
+                "diff": null
+              },
+              "uuid": "25765035-9734-4328-b42e-1339becd414b",
+              "parentUUID": "c55d703d-b57b-4afc-bf20-597f9c7a7916",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Title is updated",
+              "fullTitle": "Test user is able to access settings and view edit its profile Verify Title is updated",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.p-member_profile_name__title').contains(username).should('be.visible');",
+              "err": {},
+              "uuid": "8320193f-7e5e-476c-9522-0e3344ff9f32",
+              "parentUUID": "c55d703d-b57b-4afc-bf20-597f9c7a7916",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "25765035-9734-4328-b42e-1339becd414b"
+          ],
+          "pending": [],
+          "skipped": [
+            "8320193f-7e5e-476c-9522-0e3344ff9f32"
+          ],
+          "duration": 807,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
